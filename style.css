@@ -1032,12 +1032,15 @@ main {
     max-width: 310px;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin: 30px;
     height: auto;
     padding: 35px 25px 25px;
+  }
+  .offer-card__text p {
+    font-size: 22px;
   }
 }
 
@@ -1870,4 +1873,3 @@ main {
     margin-top: 20px;
   }
 }
-/*# sourceMappingURL=style.css.map */
