@@ -1,0 +1,133 @@
+.offer {
+    padding: 15px 0 0;
+    &__title {
+        margin-bottom: 75px;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        max-width: 375px;
+        max-height: 375px;
+        flex-basis: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 55px 30px 50px;
+        box-shadow: 0px 1px 50px 1px rgba(81, 129, 184, 0.5);
+        border-radius: 50px;
+        margin-bottom: 85px;
+        box-sizing: border-box;
+        height: 350px;
+    }
+}
+.section-title {
+    text-align: center;
+    h3 {
+        margin: 0;
+        font-family: $black;
+        font-style: normal;
+        font-size: 48px;
+        color: #747474;
+        display: inline-block;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            border-radius: 5px;
+            width: 50%;
+            bottom: -20px;
+            height: 5px;
+            background-color: #5181b8;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    
+}
+.offer-card {
+
+    &__img {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        text-align: center;
+        p {
+            margin: 0;
+            font-family: $regular;
+            font-weight: 400;
+            font-size: 24px;
+            color: rgba(116, 116, 116, 1);
+        }
+    }
+}
+
+@media (max-width:1250px) {
+    .offer {
+        &__card {
+            max-width: 30vw;
+            padding: 30px 20px;
+            height: 320px;
+        }
+    }
+}
+
+@media (max-width:1023px) {
+    .offer {
+        &__body {
+            justify-content: center;
+        }
+        &__card {
+            max-width: 310px;
+            flex-basis: 50%;
+            justify-content: center;
+            margin: 30px;
+            height: auto;
+            padding: 35px 25px 25px;
+        }
+    }
+}
+@media (max-width:768px) {
+    .offer-card {
+        &__text {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media (max-width:650px) {
+    .offer {
+        &__title {
+            margin-bottom: 75px;
+        }
+        &__card {
+            flex-basis: 80%;
+            margin: 0 0 20px;
+            max-width: 370px;
+            box-shadow: 0px 1px 50px 1px rgba(81, 129, 184, 0.5);
+            margin-bottom: 75px;
+        }
+    }
+    .offer-card {
+        padding: 30px 20px 25px;
+        &__img {
+            margin-bottom: 10px;
+            svg {
+                width: 50px;
+            }
+        }
+
+    }
+    .section-title {
+        h3 {
+            font-size: 24px;
+        }
+    }
+}

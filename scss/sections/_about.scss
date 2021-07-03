@@ -1,0 +1,103 @@
+.about {
+    margin-top: -10px;
+    padding: 30px 0 50px;
+    background-color: #5181B8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__textbox {
+        flex-basis: 50%;
+        margin-right: 20px;
+        h3 {
+            font-family: $black;
+            font-weight: 700;
+            font-size: 48px;
+            margin: 0;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+        p {
+            margin: 0;
+            font-family: $regular;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+            color: #fff;
+        }
+    }
+
+    &__videobox {
+        flex-basis: 50%;
+        .video {
+            max-width: 560px;
+            max-height: 250px;
+            width: 100%;
+            background-color: #747474;
+            margin: 0 auto;
+            border-radius: 20px;
+            display: flex;            
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .about {
+        &__textbox {
+            h3 {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media (max-width:1024px) {
+    .about {
+        &__videobox {
+            .video {
+                height: 200px;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .about {
+        &__body {
+            flex-direction: column;
+        }
+        &__textbox {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+        &__videobox {
+            width: 100%;
+        }
+    }
+}
+@media (max-width:425px) {
+    .about {
+        margin-top: -25px;
+        padding: 20px 0;
+        &__textbox {
+            h3 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}

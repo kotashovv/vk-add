@@ -1,0 +1,115 @@
+.reviews {
+    padding: 50px 0;
+    &__title {
+        margin-bottom: 80px;
+    }
+    &__body {
+    }
+
+    &__slider {
+        min-width: 0;
+    }
+
+    &__slide {
+        padding: 15px 35px 35px;
+        box-sizing: border-box;
+        border: 3px solid #5181b8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        border-radius: 20px;
+    }
+}
+.swiper-container {
+    overflow-y: visible;
+}
+.swiper-wrapper {
+}
+.slide-item {
+
+    &__date {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        span {
+            font-size: 13px;
+            font-family: $regular;
+            color: #5181B8;
+        }
+    }
+
+    &__img {
+        max-width: 115px;
+        max-height: 115px;
+        border-radius: 50%;
+        overflow: hidden;
+        text-align: center;
+        margin-bottom: 25px;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__name {
+        margin-bottom: 10px;
+        text-align: center;
+        span {
+            font-family: $black;
+            font-weight: 700;
+            font-size: 18px;
+            color: #5181B8;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        p {
+            margin: 0;
+            color: #747474;
+            font-family: $regular;
+            font-size: 13px;
+            font-weight: 400;
+        }
+    }
+}
+.swiper-slide {
+}
+.swiper-pagination {
+    position: static;
+    margin-top: 50px;
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: 1px solid #5181B8;
+        opacity: 1;
+        transition: background-color .15s ease-in-out;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #5181B8;
+        box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 1) inset;
+    }
+}
+
+@media (max-width:768px) {
+    .reviews {
+        &__slide {
+            padding: 10px 15px 20px;
+            
+        }
+        &__title {
+            margin-bottom: 50px;
+        }
+    }
+    .slide-item {
+        &__date {
+            top: 10px;
+            right: 15px;
+        }
+    }
+    .swiper-pagination {
+        margin-top: 30px;
+    }
+}

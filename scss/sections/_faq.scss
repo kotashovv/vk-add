@@ -1,0 +1,123 @@
+.faq {
+    padding: 60px 0 0;
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        div {
+            box-sizing: border-box;
+        }
+    }
+
+    &__qestions {
+        flex-basis: 50%;
+    }
+
+    &__qestion {
+        max-width: 515px;
+    }
+
+    &__img {
+        flex-basis: 50%;
+        text-align: end;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.accordeon-btn {
+    padding: 30px 60px;
+    width: 100%;
+    display: block;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    font-family: $black;
+    font-weight: 700;
+    font-size: 18px;
+    color: #747474;
+    cursor: pointer;
+    &::before {
+        content: url(assets/img/icons/arrow.svg);
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        transition: transform .15s ease;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #5181B8;
+        height: 5px;
+        border-radius: 5px;
+        transition: opacity .15s ease;
+    }
+    &.active {
+        &::after {
+            opacity: 0;
+        }
+        &::before {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+}
+.accordeon {
+
+    &__info {
+        max-height: 0;
+        transition: all .15s ease;
+        overflow: hidden;
+        p {
+            padding:0 60px 0 54px;
+            margin: 0;
+            font-family: $regular;
+            font-weight: 400;
+            font-size: 18px;
+            color: #747474;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .faq {
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__body {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__img {
+            width: 80%;
+            text-align: center;
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width:425px) {
+    .accordeon-btn {
+        padding: 20px 35px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .accordeon__info {
+        p {
+            padding: 0 10px;
+            text-align: center;
+        }
+    }
+}

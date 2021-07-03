@@ -1,0 +1,150 @@
+.bid {
+    padding: 50px 0 80px;
+    margin-top: -20px;
+    background: #5181B8 url(assets/img/stains-bg.png);
+    background-position: top center;
+    background-size: cover;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        flex-basis: 50%;
+        box-sizing: border-box;
+        h5 {
+            margin: 0;
+            font-size: 42px;
+            color: #fff;
+            font-style: normal;
+            font-family: $black;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        p {
+            margin: 0;
+            font-family: $regular;
+            font-weight: 400;
+            font-size: 24px;
+            color: #fff;
+        }
+    }
+
+    &__form {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: flex-end;
+        form {
+            max-width: 400px;
+            input {
+                &::placeholder {
+                    color: #fff;
+                }
+                width: 100%;
+                margin-bottom: 40px;
+                padding: 12px;
+                font-family: $regular;
+                font-weight: 400;
+                font-size: 18px;
+                color: #fff;
+                background-color: transparent;
+                border: none;
+                border-bottom: 3px solid #fff;
+                border-radius: 2px;
+                box-sizing: border-box;
+                &:focus {
+                    outline: none;
+                }
+            }
+            button {
+                width: 100%;
+                padding: 12px;
+                color: #5181B8;
+                background-color: #fff;
+                border-radius: 10px;
+                text-align: center;
+                font-size: 24px;
+                font-family: $regular;
+                border: none;
+                cursor: pointer;
+                transition: transform .15s ease;
+                margin-top: 10px;
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .bid {
+        margin-top: -10px;
+    }
+}
+
+@media (max-width:960px) {
+    .bid {
+        &__text {
+            h5 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        &__form {
+            form {
+                input {
+                    margin-bottom: 10px;
+                }
+                button {
+                    margin-top: 20px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .bid {
+        &__body {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__text {
+            text-align: center;
+            margin-bottom: 25px;
+            h5 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+@media (max-width:425px) {
+    .bid {
+        &__text {
+            max-width: 80%;
+            width: 100%;
+            h5 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        &__form {
+            max-width: 80%;
+            width: 100%;
+            form {
+                button {
+                    padding: 17px 5px;
+                    font-size: 16px;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
